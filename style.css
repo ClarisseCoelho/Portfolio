@@ -1,133 +1,198 @@
+
+
+
+/* NAVIGATION BAR=========================================================================== */
+.navbar {
+  background-color: #9b2915; 
+  padding: 20px 0; /*Grossura do menu - First number is top and bottom, second it left and right*/
+
+  /*Menu space formating*/
+  top: 10px;       
+  left: 10px;     
+  right: 10px;     
+  
+  z-index: 1000;   /*Stays on top of the screen*/
+
+  border-radius: 15px;
+  position: fixed; /* Keeps it locked to the viewport */
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start; /* put links to the right */
+  align-items: center;
+  padding: 0 30px; /*Distancia dos links da esquerda*/
+  
+}
+
+
+.nav-links {
+  list-style: none; /* Removes bullet points */
+  display: flex; /*Items: sit side-by-side + stretch to match height*/
+  gap: 20px;       /* Adds spacing between menu items */
+  margin: 0;
+  padding: 0;
+  
+}
+
+.nav-links a {
+  color: white;  
+  font-weight: bold;
+  text-decoration: none; /*removes the underline */
+  font-size: 16px;
+  border-radius: 15px;
+
+  /* BUTTON SETTINGS */
+  padding: 10px 20px;           /* Borders */
+  background-color: #510000;    
+  display: inline-block;    
+  
+  /* THE ANIMATION */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /*Pop up effect*/
+}
+
+.nav-links a:hover {
+  color: #b9bcbd;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(-5px) scale(1.06); /* Leaps up 5px and grows 6% larger */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* soft shadow underneath*/
+  
+}
+
+.nav-links a:active {
+  transform: translateY(-1px) scale(1.01); /* Snaps back down slightly when clicked */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);  /* Tightens the shadow back up */
+}
+
+
+/*================BODY=========================================================================*/
+
 body {
-  background-image: url(Images/library_books.avif);
+
   background-size: cover;
-  font-family: sans-serif;
-  padding: 10px;
+  font-family: Inter, Helvetica, sans-serif;
+  padding: 0px;
+  width: 65%;
+  background-color: #190B28;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 20px;
+  max-width: 2300px;
 }
 
 h1 {
   font-size: 60px;
   margin-top: 0;
   margin-bottom: 15px;
+  text-align: left;
+  font-family: Inter, Helvetica, sans-serif;
 }
 
-h2 {
-  font-size: 30px;
-}
-
-.established {
-  font-style: italic;
-}
-
-h1{
-  text-align: center;
-  font-family: Impact, serif;
-
-}
-
-h2,h3{
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+h3{
+  font-family: Inter, Helvetica, sans-serif;
   
 
 }
 
 p{
-  text-align: center;
-}
-
-
-.book-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-gap: 20px; 
-  max-width: 800px; 
-  margin: 0 auto;  
-}
-
-.book-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  text-align: center;
-}
-
-.posterCover {
-  width: 150px;
-  height: 225px;
-  object-fit: cover;
-  border-radius: 4px;
-  transition: transform 0.3s ease-in-out; /* transition effect */
-}
-
-.posterCover:hover {
-  transform: scale(1.05);
-}
-
-.reviewBody {
-  width: 75%;
-  background-color: #d6ecef;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  max-width: 2300px;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-hr {
-  height: 2px;
-  background-color: #2a9c1f;
-  border-color: #030051;
-}
-
-.bottom-line {
-  margin-top: 25px;
-}
-
-.item p {
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.flavor, .dessert {
   text-align: left;
-  width: 75%;
+  font-family: Inter, Helvetica, sans-serif;
 }
 
-.price {
-  text-align: right;
-  width: 25%;
+
+/* ================== Columns settings ==================================================*/
+
+.resume-header{
+  margin-bottom: 0;       /* Forces the header block to end exactly at the line */
+  background-color: #E7ECEF;
+  padding-bottom: 5px;   /* Use padding instead of margin to keep space inside the aqua box */
+  padding-top: 15px;
+  border-bottom: 10px solid #190B28;
+} 
+
+
+.columns-container{
+  display: flex;
+  gap: 0px;
+  margin-top: 0; /* Ensures the columns touch the header perfectly */
 }
 
-/* FOOTER =================================================================================*/
-
-footer {
-  font-size: 14px;
+.right-column {
+  flex: 3; /* Content takes up 75% */
+  order: 2; /* Pushes the right column content to visual right side */
+  background-color: #E7ECEF;
 }
 
-.address {
-  margin-bottom: 5px;
+.left-column {
+  flex: 1; /* Sidebar takes up 25% */
+  order: 1; /* Keeps sidebar on visual left side */
+  border-right: 5px solid #510000;
+  padding-right: 20px;
+  background-color: #E7ECEF;
 }
 
-a {
-  color: black;
+
+/* Division Lines*/
+hr { 
+  height: 5px;
+  background-color: #9B2915;
+  border-color: #9B2915;
 }
 
-a:visited {
-  color: black;
+/* Text Settings ===================================================================*/
+
+h2 {
+  font-size: 30px;
+  font-family: Inter, Helvetica, sans-serif;
+  text-align: left;
+  padding-left: 10px;
+
 }
 
-a:hover {
-  color: #510000;
+.icon{
+
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  padding-right: 0.25em;
+  padding-bottom: 0.15em;
+
 }
 
-a:active {
-  color: #510000;
+.item-header {
+  display: flex;
+  justify-content: space-between; /* metadata left and degree title goes */
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.meta-details p {
+  font-size: 13px;       
+  margin: 2px 0;         
+  text-align: left !important;
+  padding-left: 15px;
+}
+
+
+.degree-title {
+  font-size: 25px;      
+  color: #190B28;
+  margin-top: 0;
+  text-align: right !important;
+  padding-right: 30px;
+  font-family: sans-serif; 
+
+}
+
+.resume-details {
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 5px;
+  font-size: 13px;
+}
+.resume-details li {
+  margin-bottom: 4px;
 }
