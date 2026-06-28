@@ -144,6 +144,7 @@ hr {
 
 /* Text Settings ===================================================================*/
 
+/*Categories eg "Education", Skills, etc*/
 h2 {
   font-size: 30px;
   font-family: Inter, Helvetica, sans-serif;
@@ -195,4 +196,43 @@ h2 {
 }
 .resume-details li {
   margin-bottom: 4px;
+}
+
+
+/*Left Colum Text===================================================*/
+.contact-icon{
+
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: middle;
+  padding-right: 0.15em;
+  padding-bottom: 0.15em;
+
+}
+
+.contact-list li{
+  display: flex;
+  align-items: center; 
+  gap: 8px;            
+  margin-bottom: 1px;  
+  text-align: left ;
+}
+
+.contact-list a{
+  color: black ;
+  text-decoration: none;
+  display: inline-block; /* Allows the element to physically move */
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-list a:hover{
+  color: #510000 ;
+  transform: translateX(4px); /* 4 pixels to the right */
+}
+
+/*General Settings for Text==================*/
+
+.bold-word{
+
+  font-weight: bold;
 }
