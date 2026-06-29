@@ -1,9 +1,13 @@
 
 
 
-/* NAVIGATION BAR=========================================================================== */
+/* ==========================================================================
+  1. GLOBAL & RESET STYLES (Applies to ALL pages)
+  ========================================================================== 
+*/
+
 .navbar {
-  background-color: #9b2915; 
+  background-color: #510000; 
   padding: 20px 0; /*Grossura do menu - First number is top and bottom, second it left and right*/
 
   /*Menu space formating*/
@@ -27,7 +31,6 @@
   
 }
 
-
 .nav-links {
   list-style: none; /* Removes bullet points */
   display: flex; /*Items: sit side-by-side + stretch to match height*/
@@ -38,7 +41,7 @@
 }
 
 .nav-links a {
-  color: white;  
+  color: #510000;  
   font-weight: bold;
   text-decoration: none; /*removes the underline */
   font-size: 16px;
@@ -46,7 +49,7 @@
 
   /* BUTTON SETTINGS */
   padding: 10px 20px;           /* Borders */
-  background-color: #510000;    
+  background-color: #F0EADA;    
   display: inline-block;    
   
   /* THE ANIMATION */
@@ -54,7 +57,7 @@
 }
 
 .nav-links a:hover {
-  color: #b9bcbd;
+  color: #00120B;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateY(-5px) scale(1.06); /* Leaps up 5px and grows 6% larger */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* soft shadow underneath*/
@@ -67,7 +70,7 @@
 }
 
 
-/*================BODY=========================================================================*/
+/*---------------------------------BODY--------------------------------------------*/
 
 body {
 
@@ -75,7 +78,7 @@ body {
   font-family: Inter, Helvetica, sans-serif;
   padding: 0px;
   width: 65%;
-  background-color: #190B28;
+  background-color: #F0EADA;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -93,8 +96,6 @@ h1 {
 
 h3{
   font-family: Inter, Helvetica, sans-serif;
-  
-
 }
 
 p{
@@ -103,8 +104,99 @@ p{
 }
 
 
-/* ================== Columns settings ==================================================*/
+/* ==========================================================================
+  2. HOME PAGE EXCLUSIVE --- index.html
+  ========================================================================== 
+*/
 
+.index-body {
+
+  background-size: cover;
+  padding: 0px;
+  background-color: #F0EADA;
+  margin-left: 10%;
+  margin-right: auto;
+  margin-top: 75px;
+  padding: 20px;
+  max-width: 2300px;
+}
+
+.home-greeting,.home-intro,.home-name{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 8px ;
+}
+.home-greeting{
+  font-size: 95px;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  
+}
+
+.home-name {
+  margin-top: -75px;
+  margin-bottom: -75px;
+  font-size: 95px;
+  display: inline-block;
+  color: #00120B;        
+  position: relative; 
+  z-index: 1;         
+  transition: color 0.4s ease;  /*return */
+}
+
+/* THE SLIDING BACKGROUND --------------------------------------------*/
+.home-name::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #510000; /* background that swipes */
+  z-index: -1;                /*  red sheet  behind  text */
+  transform: scaleX(0);             
+  transform-origin: bottom left;     /*Exit animation*/
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.home-name:hover::before {
+  transform: scaleX(1);            
+  
+  /* LEFT side*/
+  transform-origin: bottom left;   
+}
+
+.home-name:hover {
+  color: #F0EADA; 
+}
+
+.home-intro{
+  font-size: 40px;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin-left: -100px;
+  padding-top: 0px;
+
+}
+
+.home-profilepicture{
+  width: 500px;
+  height: 500px;
+  border-radius: 50%; /*makes the circle*/
+  object-fit: cover; 
+  margin-right: -400px;
+
+}
+
+
+
+/* ==========================================================================
+  3. CV PAGE EXCLUSIVE --- cv.html
+  ========================================================================== 
+*/
 .resume-header{
   margin-bottom: 0;       /* Forces the header block to end exactly at the line */
   background-color: #E7ECEF;
@@ -142,7 +234,7 @@ hr {
   border-color: #9B2915;
 }
 
-/* Text Settings ===================================================================*/
+/* Text Settings -----------------------------------------------------------------*/
 
 /*Categories eg "Education", Skills, etc*/
 h2 {
@@ -199,7 +291,7 @@ h2 {
 }
 
 
-/*Left Colum Text===================================================*/
+/*Left Colum Text---------------------------*/
 .contact-icon{
 
   width: 1.4em;
@@ -230,9 +322,24 @@ h2 {
   transform: translateX(4px); /* 4 pixels to the right */
 }
 
-/*General Settings for Text==================*/
+/* ==========================================================================
+  4. BLOG PAGE EXCLUSIVE --- blog.html
+  ========================================================================== 
+*/
+
+
+
+
+
+
+/* ==========================================================================
+  5. General settings
+  ========================================================================== 
+*/
 
 .bold-word{
 
   font-weight: bold;
 }
+
+
