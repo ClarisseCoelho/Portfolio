@@ -8,43 +8,156 @@
   </head>
 
   <body class="index-body">
-    <nav class="navbar">
-      <div class="nav-container">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="cvpt.html">CVPt</a></li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cvpt.html">CVPt</a></li>
 
-    <div class="resume-wrapper">
-      <main>
-        <div class="home-container">
-          <div class ="home-text">
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- SECTION 1: HERO -->
+      <section class="home-hero-section">
+        <div class="home-hero-container">
+          <div class="home-text">
             <h1 class="home-name">
-              <span class="sloop">C</span><span class="times">larisse</span>
-              <br>
-              <div id="home-coelho">
+              <span class="sloop">C</span><span class="times">larisse</span><br>
+              <span class="home-coelho">
                 <span class="sloop">C</span><span class="times">oelho</span>
-              </div>
-            </h1>            
-              <p class="home-hero">Computer Science student at the University of Miami & Independent Researcher specializing in digital phenotyping and quantitative modeling</p>
-            
+              </span>
+            </h1>      
+            <p class="home-hero">
+              Computer Science student at the University of Miami &amp; Independent Researcher specializing in digital phenotyping and quantitative modeling
+            </p>
             <div class="home-buttons">
               <a href="cv.html" class="button-pill">View CV</a>
               <a href="mailto:clarissealvares15@gmail.com" class="button-pill">Contact me</a>
             </div>
           </div>
-          <img src="Images/stackpictures.jpg" class="home-profilepicture" alt="Clarisse profile picture">
 
+          <div class="home-image-wrapper">
+            <img src="Images/stackpictures.jpg" class="home-profilepicture" alt="Clarisse profile picture">
+          </div>
+        </div>
+      </section>
+      
+      <!-- SECTION 2: PROJECTS DISPLAY -->
+
+
+      <section class="home-project-section">
+
+        <h1 class="home-white-title">Projects</h1>
+
+        <div class="projects-grid">
+          <div class="project-one">
+            <img src="Images/weather.jpg" class="project-picture" alt="Weather Image">
+            <p class="projects-title">Weather API</p>
+            <p class="projects-description">Programming language: R</p>
+            <p class="project-subtitle">From a latitude and longitude number, it locates the closest weather station with returning data for the day and extracts the weather information</p>
+          </div>
+
+          <div class="project-two">
+            <img src="Images/gps.jpg" class="project-picture" alt="Weather Image">
+            <p class="projects-title">ArcGis</p>
+            <p class="projects-description">Programming language: Python</p>
+            <p class="project-subtitle">From a latitude and longitude, it extracts data from pre selected socioeconomic and environmental ArcGis layers</p>
+
+          </div>
+          
+          <div class="project-three">
+            <img src="Images/mushrooms.jpg" class="project-picture" alt="Weather Image">
+            <p class="projects-title">Beta-Glucan</p>
+            <p class="projects-description">Research Project</p>
+            <p class="project-subtitle">Analyzing the Immunomodulatory Potential of Beta-Glucan in Ordinary Mushrooms</p>
+          </div>
+
+        </div> 
+      </section>
+
+      <!-- SECTION 3: Blog -->
+
+      <section class="home-blog-section">
+        <h1 class="home-blue-title">Blog</h1>
+
+        <div class="blog-grid">
+          <div class="blog-one">
+            <img src="Images/nmmi2.JPG" class="project-picture" alt="Weather Image">
+            <p class="blog-title">Military boarding school?</p>
+            <p class="blog-description">My experience as a cadet at the New Mexico Military Institute</p>
+          </div>
+
+          <div class="blog-two">
+            <img src="Images/outdoor.JPG" class="project-picture" alt="Weather Image">
+            <p class="blog-title">Outdoor Adventures</p>
+            <p class="blog-description">Rappeling, hiking, managing a ropes course...</p>
+
+          </div>
+          
+          <div class="blog-three">
+            <img src="Images/1984.jpg" class="project-picture" alt="Weather Image">
+            <p class="blog-title">1984</p>
+            <p class="blog-description">Me yapping again about something other than a movie</p>
+          </div>
+
+          <div class="blog-four">
+            <img src="Images/parasite.jpg" class="project-picture" alt="Weather Image">
+            <p class="blog-title">Parasite</p>
+            <p class="blog-description">Analysing the cinematography impact in the storytelling of the movie Parasite </p>
+          </div>
+
+          <div class="blog-five">
+            <img src="Images/mononoke.jpg " class="project-picture" alt="Weather Image">
+            <p class="blog-title">Princess Mononoke</p>
+            <p class="blog-description">Me yapping about environmentalism in a movie </p>
+          </div>
+
+          <div class="blog-six">
+            <img src="Images/international.jpg" class="project-picture" alt="Weather Image">
+            <p class="blog-title">Testimony of an international student</p>
+            <p class="blog-description">Me yapping again about something other than a movie</p>
+          </div>
+        </div> 
+
+
+      </section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-brand">
+            <h3>Clarisse Coelho</h3>
+            <p>Computer Science & Digital Phenotyping Researcher</p>
+          </div>
+
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="cv.html">CV</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="cvpt.html">CVPt</a></li>
+            </ul>
         </div>
 
-      </main>
-      
+        
 
-    </div> <!--End of div resume-wrapper-->
+        <div class="footer-bottom">
+          <p>© 2026 Clarisse Coelho. All rights reserved.</p>
+        </div>
+    </footer>
+
   </body>
 </html>
